@@ -14,22 +14,24 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 248.6 100% 97.3%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --button: 175.3 77.4% 26.1%;
+    --button-foreground: 174.7 83.9% 31.6%;
+    --primary: 167.2 85.5% 89.2%;
+    --primary-foreground: 166.2 76.5% 96.7%;
     --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary-foreground: 167.2 85.5% 89.2%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 167.2 85.5% 89.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 166.2 76.5% 96.7%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
@@ -42,21 +44,23 @@ body {
   }
   .dark {
     --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --foreground: 166.2 76.5% 96.7%;
     --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 166.2 76.5% 96.7%;
     --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --popover-foreground: 166.2 76.5% 96.7%;
+    --button: 175.3 77.4% 26.1%;
+    --button-foreground: 174.7 83.9% 31.6%;
+    --primary: 166.2 76.5% 96.7%;
+    --primary-foreground: 167.2 85.5% 89.2%;
     --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 166.2 76.5% 96.7%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 166.2 76.5% 96.7%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 166.2 76.5% 96.7%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
