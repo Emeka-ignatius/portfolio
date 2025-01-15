@@ -8,7 +8,6 @@ import Image from "next/image";
 import { BiQuestionMark } from "react-icons/bi";
 import { GrDocumentUser } from "react-icons/gr";
 import { FloatingDock } from "./ui/floating-dock";
-import { ModeToggle } from "./shared/mode-toggle";
 
 export function FloatingDockDemo() {
   const links = [

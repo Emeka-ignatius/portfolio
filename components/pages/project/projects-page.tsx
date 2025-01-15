@@ -1,16 +1,16 @@
 'use client'
 
-import { useState, useEffect, SetStateAction } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Github, Globe, Search, Star } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Globe, Search, Star } from 'lucide-react'
 import Image from 'next/image'
-import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
+import { SetStateAction, useEffect, useState } from 'react'
 
 const projects = [
   {
@@ -130,7 +130,7 @@ export function ProjectsPageComponent() {
 
   return (
     <MaxWidthWrapper>
-    <div className="min-h-screen py-28  to-lavender-50">
+    <div className="min-h-screen md:py-28 py-0  to-lavender-50">
       <header className="bg-teal-700 text-white py-12">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold">My Projects</h1>
@@ -140,19 +140,19 @@ export function ProjectsPageComponent() {
 
       <main className="container mx-auto px-6 py-12">
         <section className="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex  flex-wrap gap-2">
             {categories.map(category => (
               <Button
                 key={category}
                 onClick={() => setFilter(category)}
                 variant={filter === category ? "default" : "outline"}
-                className="transition-all  duration-300"
+                className="transition-all text-teal-700 duration-300"
               >
                 {category}
               </Button>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex  items-center gap-2">
             <Input
               type="text"
               placeholder="Search projects..."
@@ -241,7 +241,7 @@ export function ProjectsPageComponent() {
                             </div>
                             <div>
                               <h4 className="font-semibold mb-2">Testimonial:</h4>
-                              <p className="italic text-gray-600">"{project.testimonial}"</p>
+                              <p className="italic text-gray-600">{project.testimonial}</p>
                             </div>
                           </div>
                         </DialogContent>

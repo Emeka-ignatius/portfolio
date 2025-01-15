@@ -1,11 +1,10 @@
+import { FloatingDockDemo } from "@/components/floating-dock";
+import Footer from "@/components/layouts/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
-import Navbar from "@/components/layouts/navbar";
-import Footer from "@/components/layouts/footer";
-import { FloatingDockDemo } from "@/components/floating-dock";
-import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

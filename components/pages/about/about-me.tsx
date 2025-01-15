@@ -1,12 +1,12 @@
 'use client'
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Brain, Code, Lightbulb, Rocket, Users, Globe, Book } from 'lucide-react'
-import { motion } from "framer-motion"
 import MaxWidthWrapper from "@/components/layouts/max-width-wrapper"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { Book, Brain, Code, Globe, Lightbulb, Users } from 'lucide-react'
 
-export function AboutMe() {
+export function  AboutMe() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -23,7 +23,7 @@ export function AboutMe() {
 
   return (
     <MaxWidthWrapper>
-    <div className="min-h-screen py-28  text-gray-800">
+    <div className="min-h-screen py-0  md:py-28  text-gray-800">
       <motion.header 
         className="bg-teal-700 text-white py-12"
         initial={{ opacity: 0 }}
@@ -38,8 +38,8 @@ export function AboutMe() {
       <main className="container mx-auto px-6 py-12">
         <motion.section className="mb-12" {...fadeInUp}>
           <h2 className="text-2xl font-bold mb-4 text-teal-700">Bio</h2>
-          <p className="text-lg text-gray-700">
-            I'm an experienced Frontend Developer with over 3 years of expertise in building highly responsive and user-centric web applications. My passion lies in creating innovative solutions using modern frameworks such as React.js, Next.js, and Tailwind CSS. I have a proven track record of improving load times by 25% and enhancing user satisfaction. My ability to lead cross-functional teams and deliver high-quality software solutions sets me apart in the field.
+          <p className="md:text-lg text-sm text-gray-700">
+            {`I'm an experienced Frontend Developer with over 3 years of expertise in building highly responsive and user-centric web applications. My passion lies in creating innovative solutions using modern frameworks such as React.js, Next.js, and Tailwind CSS. I have a proven track record of improving load times by 25% and enhancing user satisfaction. My ability to lead cross-functional teams and deliver high-quality software solutions sets me apart in the field.`}
           </p>
         </motion.section>
 
@@ -56,8 +56,6 @@ export function AboutMe() {
               { skill: "Next.js", level: 85 },
               { skill: "TypeScript", level: 80 },
               { skill: "Tailwind CSS", level: 85 },
-              { skill: "Node.js", level: 75 },
-              { skill: "GraphQL", level: 70 },
               { skill: "Jest", level: 75 },
               { skill: "Git", level: 80 },
             ].map((item, index) => (
@@ -119,11 +117,11 @@ export function AboutMe() {
                 <Card className="border-l-4 border-l-teal-600">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold text-teal-700">{item.role}</h3>
-                      <Badge variant="secondary">{item.year}</Badge>
+                      <h3 className="md:text-xl text-md font-bold text-teal-700">{item.role}</h3>
+                      <Badge variant="secondary" className="text-teal-700">{item.year}</Badge>
                     </div>
-                    <p className="text-gray-600 mb-2">{item.company}</p>
-                    <ul className="list-disc list-inside text-gray-700">
+                    <p className="text-gray-600 md:text-xl text-sm mb-2">{item.company}</p>
+                    <ul className="list-disc md:text-xl text-sm list-inside text-gray-700">
                       {item.achievements.map((achievement, i) => (
                         <li key={i}>{achievement}</li>
                       ))}
@@ -137,7 +135,7 @@ export function AboutMe() {
 
         <motion.section className="mb-12" {...fadeInUp}>
           <h2 className="text-2xl font-bold mb-4 text-teal-700">Certifications</h2>
-          <ul className="space-y-2 text-gray-700">
+          <ul className="space-y-2 md:text-xl text-sm text-gray-700">
             <li>Certificate Of Proficiency In Information Systems Management (CPISM) - APTECH Mumbai, India</li>
             <li>Diploma In Ms Office - MICHO SKYINE SYSTEMS</li>
             <li>Fundamental In Digital Marketing - Google Digital Workshop</li>
@@ -161,7 +159,7 @@ export function AboutMe() {
                     <Globe className="h-6 w-6 mr-2 text-teal-600" />
                     <h3 className="text-xl font-bold text-teal-700">Languages</h3>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700">
+                  <ul className="list-disc md:text-xl text-sm list-inside text-gray-700">
                     <li>English - Fluent</li>
                   </ul>
                 </CardContent>
@@ -174,7 +172,7 @@ export function AboutMe() {
                     <Book className="h-6 w-6 mr-2 text-teal-600" />
                     <h3 className="text-xl font-bold text-teal-700">Interests</h3>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700">
+                  <ul className="list-disc md:text-xl text-sm list-inside text-gray-700">
                     <li>Staying updated with the latest web technologies</li>
                     <li>Contributing to open-source projects</li>
                     <li>Attending tech meetups and conferences</li>
@@ -199,7 +197,7 @@ export function AboutMe() {
                   <CardContent className="p-6">
                     <div className="mb-4 text-teal-600">{item.icon}</div>
                     <h3 className="text-lg font-bold mb-2 text-teal-700">{item.value}</h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-gray-600 md:text-xl text-sm line-clamp-2">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

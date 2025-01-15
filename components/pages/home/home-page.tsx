@@ -3,7 +3,7 @@
 import MaxWidthWrapper from "@/components/layouts/max-width-wrapper"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ChevronRight, Code, Laptop, Zap, Github, Linkedin, Twitter } from 'lucide-react'
+import { ChevronRight, Code, Laptop, Zap } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 
@@ -23,9 +23,9 @@ export function HomePageComponent() {
             />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-4 text-teal-700">Hi, I'm Fusco</h2>
+            <h2 className="text-4xl font-bold mb-4 text-teal-700">{`Hi, I'm Fusco`}</h2>
             <p className="text-xl mb-6 text-gray-600">
-              A Frontend Developer specializing in crafting responsive and user-centric web applications
+              {`A Frontend Developer specializing in crafting responsive and user-centric web applications`}
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <Button 
@@ -86,7 +86,7 @@ export function HomePageComponent() {
                 <CardContent className="p-6">
                   <h4 className="text-xl font-bold mb-2 text-teal-700">{project.title}</h4>
                   <p className="text-gray-600 mb-4">{project.description}</p>
-                  <Button asChild variant="default" className="w-full hover:text-black">
+                  <Button asChild variant="default" className="w-full text-teal-700 hover:text-black">
                     <Link href={project.link} target="_blank" rel="noopener noreferrer">View Project</Link>
                   </Button>
                 </CardContent>
@@ -102,7 +102,7 @@ export function HomePageComponent() {
             className="bg-teal-600 hover:bg-teal-700 text-white transition-all duration-300 transform hover:scale-105"
           >
             <Link href="/contact" className="inline-flex items-center">
-              Let's Connect <ChevronRight className="ml-2 h-4 w-4" />
+              {`Let's Connect`} <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </section>

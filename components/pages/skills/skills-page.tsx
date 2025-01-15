@@ -15,7 +15,7 @@ const SkillCard = ({ icon, name, description, proficiency }: any) => (
         {icon}
         <h3 className="text-xl font-bold ml-2">{name}</h3>
       </div>
-      <p className="text-gray-600 mb-4 flex-grow">{description}</p>
+      <p className="text-gray-600 md:text-xl text-sm mb-4 flex-grow">{description}</p>
       <div className="flex items-center justify-between">
         <Badge variant="default" className="bg-[#0d9488]">Proficiency: {proficiency}%</Badge>
         <div className="w-16 h-16 relative">
@@ -63,7 +63,7 @@ const skillCategories = [
     color: "bg-secondary",
     skills: [
       { icon: <Database className="w-6 h-6 text-green-600" />, name: "Node.js", description: "Server-side JavaScript", proficiency: 75 },
-      { icon: <Database className="w-6 h-6 text-green-600" />, name: "SQL", description: "Relational database management", proficiency: 70 },
+      { icon: <Database className="w-6 h-6 text-green-600" />, name: "Postgres", description: "Relational database management", proficiency: 70 },
     ]
   },
   {
@@ -80,7 +80,7 @@ const skillCategories = [
 export function SkillsPageComponent() {
   return (
     <MaxWidthWrapper>
-    <div className="min-h-screen py-28 to-gray-100">
+    <div className="min-h-screen md:py-28 to-gray-100">
       <header className="bg-teal-700 text-white py-12">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold">My Skills</h1>
@@ -97,7 +97,7 @@ export function SkillsPageComponent() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-bold mb-6 text-teal-700">{category.name}</h2>
+            <h2 className="text-2xl md:px-0 px-3 font-bold mb-6 text-teal-700">{category.name}</h2>
             <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${category.color} p-6 rounded-lg`}>
               {category.skills.map((skill, skillIndex) => (
                 <motion.div
@@ -116,9 +116,9 @@ export function SkillsPageComponent() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold mb-6 text-teal-700">Continuous Learning</h2>
           <p className="text-gray-700 mb-4">
-            As a passionate developer, I'm always expanding my skill set. Currently, I'm focusing on:
+           {` As a passionate developer, I'm always expanding my skill set. Currently, I'm focusing on:`}
           </p>
-          <ul className="list-disc list-inside text-gray-700">
+          <ul className="list-disc md:text-xl text-sm list-inside text-gray-700">
             <li>Advanced state management techniques in React</li>
             <li>GraphQL for more efficient API queries</li>
             <li>Serverless architecture and cloud computing</li>
