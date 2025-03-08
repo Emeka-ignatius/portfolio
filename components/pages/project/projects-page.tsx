@@ -77,10 +77,23 @@ const projects = [
     date: "2023-06-10",
     complexity: 5,
     testimonial: "Transpay has revolutionized our tax collection process. It's efficient, transparent, and has significantly improved our revenue collection."
-  }
+  },
+  {
+    id: 6,
+    title: "PennyPlan",
+    description: "Pennyplan is a smart automated budget & expense management platform that helps user to effortlessly track expenses, create smart budgets, and achieve thier financial goals.",
+    technologies: ["React", "Next.js", "NFC Technology", "Node.js"],
+    liveLink: "https://www.pennyplan.com.ng/",
+    githubLink: "#",
+    image: "/projects/pennyplan.jpg",
+    category: "Finance",
+    date: "2025-03-01",
+    complexity: 5,
+    testimonial: "As a freelancer, Penny Plan has made expense tracking a breeze. I couldn't imagine working without it now."
+  },
 ]
 
-const categories = ["All", "Educational", "E-commerce", "Food & Beverage", "Government"]
+const categories = ["All", "Educational", "E-commerce", "Food & Beverage", "Government", "Finance"]
 const sortOptions = [
   { value: "date-desc", label: "Newest First" },
   { value: "date-asc", label: "Oldest First" },
